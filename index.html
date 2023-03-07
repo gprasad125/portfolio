@@ -68,8 +68,8 @@
                     <span style='color:#14D172'>March</span> 2023. I'm originally from Texas, although I've come to know
                     San Diego as a second home!
                 </p>
-                <p>I'm currently working as a Full-Stack Developer with <span style='color:yellow'><a
-                            href='https://www.ai-camp.org'>AI Camp</a></span>, although my time with
+                <p>I've been working as a developer with <span style='color:yellow'><a
+                            href='https://www.ai-camp.org'>AI Camp</a></span> since May 2022, although my time with
                     them will end in April 2023. As such, I'm on the job market, looking for full-time positions in
                     data science, analytics, and programming. Thanks for visiting my website!
                 </p>
@@ -129,7 +129,7 @@
             <article id="contact">
                 <h2 class="major">Contact</h2>
                 <h3> Wanna reach me? Shoot me an email below, or reach out over any of my linked socials :D</h3>
-                <form method="post" action="#">
+                <form id="contact-form">
                     <div class="fields">
                         <div class="field half">
                             <label for="name">Name</label>
@@ -145,10 +145,34 @@
                         </div>
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input id = 'submit' type="submit" value="Send Message" class="primary" /></li>
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </form>
+
+                <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+                <script>
+                    (function(){
+                        emailjs.init('e6GsRyhAqsoBXyl3V');
+                    })();
+
+                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        emailjs.sendForm('service_4jv3rfk', 'template_6a36eg8', this)
+                        .then(function() {
+                            alert('Your message has been sent!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                    });
+
+                </script>
+
+
+
+
+
                 <ul class="icons">
                     <!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
                     <li><a href="https://www.discordapp.com/users/156196603458355202"
