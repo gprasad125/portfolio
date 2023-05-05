@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <noscript>
+    <!-- <script src="https://cdn.tailwindcss.com" /> -->
+    <!-- <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
+    </noscript> -->
 </head>
 
 <body class="is-preload">
@@ -33,12 +34,14 @@
                     <h1>Hey, I'm Gokul</h1>
                     <strong>
                         <p style="font-size:larger">
+
                             
-                            I'm a newly graduated <span style = "color: aquamarine">Data Science student</span>, with a passion for 
-                            <span style = "color: orange"> Large Language Models</span>,
-                            <span style = "color: green"> Sports analytics</span>, and
+                            Passionate about
+                            <span style="color: aquamarine">Data Science</span>, 
+                            <span style="color: orange"> Large Language Models</span>,
+                            <span style="color: green"> Education</span>, and
                             building cool tools!
-                            
+
                         </p>
                     </strong>
 
@@ -59,7 +62,7 @@
                     <li><a href="#work">Work</a></li>
                     <!-- <li><a href="#about">About</a></li> -->
                     <li><a href="#contact">Contact</a></li>
-                    <!--<li><a href="#elements">Elements</a></li>-->
+                    <!-- <li><a href="#resume">Resume</a></li> -->
                 </ul>
             </nav>
         </header>
@@ -75,10 +78,8 @@
                     <span style='color:#14D172'>March</span> 2023. I'm originally from Texas, although I've come to know
                     San Diego as a second home!
                 </p>
-                <p>I've been working as a developer with <span style='color:yellow'><a
-                            href='https://www.ai-camp.org'>AI Camp</a></span> since May 2022, although my time with
-                    them will end in April 2023. As such, I'm on the job market, looking for full-time positions in
-                    data science, analytics, and programming. Thanks for visiting my website!
+                <p>I'm working as a Data Scientist with <span style='color:yellow'><a href='https://www.ai-camp.org'>AI
+                            Camp</a></span> since May 2023, having been previously with them for over a year.  Thanks for visiting my website!
                 </p>
             </article>
 
@@ -175,7 +176,7 @@
                         </div>
                     </div>
                     <ul class="actions">
-                        <li><input id = 'submit' type="submit" value="Send Message" class="primary" /></li>
+                        <li><input id='submit' type="submit" value="Send Message" class="primary" /></li>
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </form>
@@ -183,18 +184,19 @@
                 <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 
                 <script>
-                    (function(){
+                    (function () {
                         emailjs.init('e6GsRyhAqsoBXyl3V');
                     })();
 
-                    document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    document.getElementById('contact-form').addEventListener('submit', function (event) {
                         event.preventDefault();
                         emailjs.sendForm('service_4jv3rfk', 'template_6a36eg8', this)
-                        .then(function() {
-                            alert('Your message has been sent!');
-                        }, function(error) {
-                            console.log('FAILED...', error);
-                        });
+                            .then(function () {
+                                alert('Your message has been sent!');
+                            }, function (error) {
+                                alert('Your message was not sent. Please try again later or by contacting me via one of the other methods. LinkedIn or Discord preferred!')
+                                console.log('FAILED...', error);
+                            });
                     });
 
                 </script>
@@ -214,26 +216,86 @@
                 </ul>
             </article>
 
-            <!-- Elements -->
-            <article id="elements">
-                <h2 class="major">Elements</h2>
+            <!-- Resume -->
+            <article id="resume">
+                <h2 class="major">Resume</h2>
 
                 <section>
-                    <h3 class="major">Text</h3>
-                    <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is
+                    <h3>Objective</h3>
+                    <blockquote>
+                        I am a recent graduate of UC San Diego with a <b>B.S. in Data Science</b>. I have extensive work
+                        experience in data science, analytics, and application development with a strong focus on Large
+                        Language Models.
+                        <br><br>
+                        I am looking for data science and analytics opportunities! Please do not hesitate to reach out
+                        if you think I would be a good fit at your company!
+
+                    </blockquote>
+                    <!-- <p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is
                         <em>emphasized</em>.
                         This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
                         This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a
                             href="#">this is a link</a>.
-                    </p>
+                    </p> -->
                     <hr />
-                    <h2>Heading Level 2</h2>
+
+                    <h3>Work Experience</h3>
+
+                    <h3 style="float:right;">CA</h3>
+                    <h3>AI Camp</h3>
+                    <div>
+                        <h4 style="float:right">Jan 2023 - Present</h4>
+                        <h4>Full-Stack Developer</h5>
+
+                        <h4 style="float:right">Sept 2022 - Dec 2022</h4>
+                        <h4>Data Science Lead</h5>
+
+                        <h4 style="float:right">May 2022 - Aug 2022</h4>
+                        <h4>Data Science Instructor</h4>
+
+                    </div>
+
+                    <br>
+
+                    <h3 style="float:right;">TX</h3>
+                    <h3>Filestack</h3>
+                    <div>
+                        <h4 style="float:right">Jun 2021 - Aug 2021</h4>
+                        <h4>Data Intern</h4>
+                    </div>
+
+                    <!-- style="display:flex;" -->
+                    <!-- <h2>Heading Level 2</h2>
                     <h3>Heading Level 3</h3>
                     <h4>Heading Level 4</h4>
                     <h5>Heading Level 5</h5>
-                    <h6>Heading Level 6</h6>
+                    <h6>Heading Level 6</h6> -->
                     <hr />
-                    <h4>Blockquote</h4>
+
+                    <h3> Skills </h3>
+                    <div style="display:flex">
+                        <div class="skills">Python</div>
+                        <div class="skills">JavaScript</div>
+                        <div class="skills">SQL</div>
+                        <div class="skills">R</div>
+                    </div>
+
+                    <div style="display:flex">
+                        <div>
+                            <a class="button" href = "#python">Python</a>
+                        </div>
+                        <div class="skills">JavaScript</div>
+                        <div class="skills">SQL</div>
+                        <div class="skills">R</div>
+                    </div>
+
+                    <article id="python"> fuck! </article>
+
+                    <hr />
+
+
+
+                    <!-- <h4>Blockquote</h4>
                     <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus
                         euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
                         iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem
@@ -247,7 +309,7 @@
                             i++;
                             }
 
-                            print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+                            print 'It took ' + i + ' iterations to sort the deck.';</code></pre> -->
                 </section>
 
                 <section>
@@ -401,7 +463,7 @@
                         <li><a href="#" class="button small">Small</a></li>
                     </ul>
                     <ul class="actions">
-                        <li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+                        <li><a href="#" class="button primary icon solid fab fa-python">Icon</a></li>
                         <li><a href="#" class="button icon solid fa-download">Icon</a></li>
                     </ul>
                     <ul class="actions">
